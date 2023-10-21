@@ -79,14 +79,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="64dp"
         android:ems="10"
         android:inputType="text"
         android:text="Nombres"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView1_1"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textJugadores" />
 
@@ -101,100 +99,8 @@
         android:text="Nombres"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/textView2_1"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextJugadores1" />
-
-    <TextView
-        android:id="@+id/textView1_1"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView1_2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextJugadores1"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView1_2"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView1_3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView1_1"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView1_3"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView1_2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView2_1"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2_2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextJugadores2"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_1" />
-
-    <TextView
-        android:id="@+id/textView2_2"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="36dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2_3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2_1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_2" />
-
-    <TextView
-        android:id="@+id/textView2_3"
-        android:layout_width="38dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="35dp"
-        android:text="0"
-        android:textAlignment="gravity"
-        android:textColor="@color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2_2"
-        app:layout_constraintTop_toBottomOf="@+id/textView1_3" />
 
     <Button
         android:id="@+id/button"
@@ -203,8 +109,8 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
         android:text="PUNTO"
-        app:layout_constraintEnd_toStartOf="@+id/textViewMarcador1"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textColorHighlight="@android:color/holo_green_dark"
+        android:textColorLink="@android:color/holo_green_light"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/editTextJugadores2" />
 
@@ -215,8 +121,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:text="PUNTO"
-        app:layout_constraintEnd_toStartOf="@+id/textViewMarcador2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -246,34 +150,92 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <TextView
-        android:id="@+id/textViewMarcador1"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="28dp"
-        android:text="00"
-        android:textAlignment="gravity"
-        android:textColor="#F44336"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView2_2" />
+    <EditText
+        android:id="@+id/set1_1"
+        android:layout_width="48dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/editTextJugadores1"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textViewMarcador2"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="16dp"
-        android:text="00"
-        android:textAlignment="gravity"
-        android:textColor="#F44336"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+    <EditText
+        android:id="@+id/set1_2"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/set1_1"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/set1_3"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="90dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/set1_2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/set2_1"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/editTextJugadores2"
+        app:layout_constraintTop_toBottomOf="@+id/set1_1" />
+
+    <EditText
+        android:id="@+id/set2_2"
+        android:layout_width="45dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/set2_1"
+        app:layout_constraintTop_toBottomOf="@+id/set1_2" />
+
+    <EditText
+        android:id="@+id/set2_3"
+        android:layout_width="45dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/set2_2"
+        app:layout_constraintTop_toBottomOf="@+id/set1_3" />
+
+    <EditText
+        android:id="@+id/marcadorJ1"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/set2_1" />
+
+    <EditText
+        android:id="@+id/marcadorJ2"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMarcador1" />
+        app:layout_constraintTop_toBottomOf="@+id/marcadorJ1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
