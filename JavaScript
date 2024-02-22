@@ -1,0 +1,76 @@
+////////////////EJERCICIO TEXTO MOSTRAR////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const NOMBRE="Marcos Miranda"
+        const JUEGO="Padel"
+        const TEXTO="Texto deseado para mostratr"
+
+       document.body.innerHTML="<h1>"+TEXTO;
+   </script>
+</body>
+</html>
+/////////////////////EJERCICIO NUMBERS//////////////////////
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title> Javascript: Numbers</title>
+    </head>
+    <body>
+        <script>
+          const TOTAL=102;
+          const PERSONAS=6;
+          const TOTAL_POR_PERSONA=TOTAL/PERSONAS;
+          console.log("Importe por persona " + TOTAL_POR_PERSONA);
+    </script>
+    </body>
+</html>
+//////////////EJERCICIO USUARIO EN LINEA////////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="texto"></p>                                          
+    <script>
+        const ENLINEA=false;
+        const BLOQUE_TEXTO=document.querySelector('.texto')         //vamos a la class deseada con querySelector a la ck
+        if(ENLINEA){
+            BLOQUE_TEXTO.innerHTML='USUARIO EN LINEA'
+        } else{
+            BLOQUE_TEXTO.innerHTML='USUARIO FUERA DE LINEA'
+        }
+    </script>
+</body>
+</html>
+/////////////EJERCICIO DESCUENTO ARTICULOS///////////////////////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const PRECIO_MOVIL=300;
+        const PRECIO_CASCOS=30;
+        const PRECIO_CARCASA=10;
+        const DESCUENTO=10;
+        const TOTAL=PRECIO_MOVIL+PRECIO_CASCOS+PRECIO_CARCASA;
+        const SUBTOTAL=TOTAL*10/100;
+        console.log(SUBTOTAL)
+  </script>
+</body>
+</html>
+
