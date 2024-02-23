@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 2 . Objetos Salarios</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 2</h1>
+    <h3>Genera un script usando el playground de TypeScript (pero configurado para JavaScript) que
+        pida cinco sueldos enteros al usuario usando un bucle for normal (usa prompt para pedir los
+        datos y conviértelos a valor numérico posteriormente usando parseInt(string) ). Almacena los
+        salarios introducidos por el usuario en un objeto donde los nombres de cada propiedad serán
+        “Salario 1”, “Salario 2”, …</h3>
+
+    <script>
+        let salarios = [];
+        for (let i = 1; i <= 5; i++) {
+            let salario = prompt("Introduce un salario");
+            salarios.push(parseInt(salario));
+        }
+
+        let nominas = {
+            Salario1: salarios[0],
+            Salario2: salarios[1],
+            Salario3: salarios[2],
+            Salario4: salarios[3],
+            Salario5: salarios[4],
+
+        };
+        
+        for(let key in nominas){
+            if(nominas.hasOwnProperty(key)){
+                document.body.innerHTML += "<p1> "+key+ " : " + nominas[key] +"<br>";
+            }
+        }
+
+        let anotacion="Ahora vamos a multiplicar por 10 los salarios"
+        document.body.innerHTML += "<p> " +anotacion;
+
+        for(let key in nominas){
+            if(nominas.hasOwnProperty(key)){
+                document.body.innerHTML += "<p1> "+key+ " : " + nominas[key]*10 +"<br>";
+            }
+        }
+
+        let anotacion2="Ahora vamos a mostrar recorriendo con for of"
+        document.body.innerHTML += "<p> " +anotacion2;
+
+        let keys=Object.keys(nominas);
+        for(let key of keys){
+            if(nominas.hasOwnProperty(key)){
+                document.body.innerHTML += "<p1> "+key+ " : " + nominas[key] +"<br>";
+            }
+        }
+        
+        
+       
+    </script>
+
+</body>
+
+</html>
