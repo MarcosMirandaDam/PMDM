@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 2 . Objetos Salarios</title>
+</head>
+
+<body>
+
+    <h1>Ejercicio 3</h1>
+    <h3>Genera un script usando el playground de TypeScript (pero configurado para JavaScript) que
+        pida el nombre, edad, ciudad, y estado civil de un empleado usando prompt() para ello y vete
+        guardando esos datos en un objeto Javascript que crearás y que se llamará Empleado.</h3>
+
+    <script>
+        let nombre=prompt("Introduce tu nombre");
+        let edad=prompt("Introduce tu edad");
+        let ciudad=prompt("Introduce tu ciudad de residencia");
+        let estadoCivil=prompt("Introduce tu estado civil");
+
+        let empleado={
+            Nombre: nombre,
+            Edad: edad,
+            Ciudad: ciudad,
+            EstadoCivil: estadoCivil,
+        };
+
+        for(let key in empleado){
+            if(empleado.hasOwnProperty(key)){
+                document.body.innerHTML += "<p1> "+key+ " : " + empleado[key] +"<br>";
+            }
+        }
+        
+       
+    </script>
+
+</body>
+
+</html>
