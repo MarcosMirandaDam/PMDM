@@ -9,7 +9,12 @@
 
 <body>
 
-    <h1>Ejercicio 1</h1><br>
+    <h1>Ejercicio 1</h1>
+    <h3>Genera un script usando el playground de TypeScript (pero configurado para JavaScript) que
+        pida cinco números al usuario usando un bucle for normal (usa prompt para pedir los datos y
+        conviértelos a valor numérico posteriormente usando parseInt(string) ). Almacena los números
+        introducidos por el usuario en un array. A continuación, usando un for-in que recorra el array,
+        muestra un mensaje informando del resultado de multiplicar cada uno de los números por 3</h3>
 
     <script>
         let numeros = [];
@@ -23,7 +28,7 @@
             resultado.push(numeros[i] * 3);
         }
 
-        document.body.innerHTML = "<p1>Numeros originales--->" + numeros + "<br>";
+        document.body.innerHTML += "<p1>Numeros originales--->" + numeros + "<br>";
 
         document.body.innerHTML += "<p1>Números multiplicados por 3---->" + resultado;
 
