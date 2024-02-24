@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Javascript: Numbers</title>
+</head>
+
+<body>
+    <h1>RESUMEN DE CUENTA </h1>
+    <script>
+        const TOTAL = 102;
+        const PERSONAS = 6;
+
+        function totalPersona(TOTAL, PERSONAS) {
+            let resultado = TOTAL / PERSONAS;
+            return resultado;
+
+        }
+        let resultado = totalPersona(TOTAL, PERSONAS);
+        console.log(resultado);
+        document.body.innerHTML+="<p>Importe total --->" + TOTAL + "<br>";
+        document.body.innerHTML+="<p>Numer de personas--->" + PERSONAS + "<br>";
+        document.body.innerHTML+="<p>Importe por persona--->" + resultado + "<br>";
+    </script>
+</body>
+
+</html>
