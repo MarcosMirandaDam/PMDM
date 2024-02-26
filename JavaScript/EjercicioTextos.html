@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="texto"></p>                                          
+    <script>
+        const ENLINEA=false;
+        const BLOQUE_TEXTO=document.querySelector('.texto')         //vamos a la class deseada con querySelector a la ck
+        if(ENLINEA){
+            BLOQUE_TEXTO.innerHTML='USUARIO EN LINEA'
+        } else{
+            BLOQUE_TEXTO.innerHTML='USUARIO FUERA DE LINEA'
+        }
+       
+  </script>
+ 
+    
+</body>
+</html>
