@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Diseña una función llamada leerNumeros(max) usando el playground de TypeScript
+        (pero configurado para JavaScript) que pida max números al usuario usando un bucle
+        for normal (usa prompt para pedir los datos y conviértelos a valor numérico posteriormente
+        usando parseInt(string) ). Esa función recibe max como parámetro y devuelve un array de enteros
+        con los números leídos. Pruébala.
+    </h1>
+    <script>
+        let numerosParaLeer = [];           //creamos array que llenaremos con los numeros leidos
+        const numerosMax = prompt("Define el número maximo a añadir:")
+
+        function leerNumeros(numerosMax) {
+            for (let i = 0; i < numerosMax; i++) {
+                let palabra = prompt("Introduce un numero");
+                let numero = parseInt(palabra);
+                numerosParaLeer.push(numero);
+            }
+            return numerosParaLeer;
+        };
+
+        //console.log(leerNumeros(numerosMax));  
+        document.body.innerHTML += "<p1>Numeros añadidos al array--->" + leerNumeros(numerosMax) + "<br>";
+
+    </script>
+</body>
+
+</html>
