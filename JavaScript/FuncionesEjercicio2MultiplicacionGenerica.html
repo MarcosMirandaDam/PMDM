@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Modifica el ejercicio 1, apartado b) para que la función multiplicarPorTres sea genérica y permita multiplicar
+        por cualquier factor que se le indicará por parámetro. Por tanto, ahora se llamará multiplicarPorNumero(factor).
+        Para eso debéis convertirla en una función que devuelva otra función.
+        Probarla llamando a la función modificarArrayNumeros(array, funcionModificación) con diferentes funciones de
+        modificación.
+        Por ejemplo: llamarla una vez multiplicando por 10 y otra vez multiplicando por 5.
+    </h1>
+    <script>
+        const numero = prompt("Introduce un numero por favor:")
+        const factor= prompt("¿Cual es el factor deseado?")
+        function multiplicarPorNumero(factor) {
+            return function (numero) {
+                return numero * factor;
+            };
+        }
+        const resultado=multiplicarPorNumero(Number(factor))(Number(numero));
+
+        document.body.innerHTML += "<p1>Resultado de la operación---> " + numero + " x "+ factor +" ---> " + resultado + "<br>";
+
+    </script>
+</body>
+
+</html>
