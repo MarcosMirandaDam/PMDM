@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1 Apartado C</title>
+</head>
+
+<body>
+    <h1>Diseña otra función llamada modificarArrayNumeros(array, funcionModificación),
+        que recibe 2 parámetros: el array de números y una función que haga una modificación
+        con un número cualquiera (por ejemplo la función hecha en el punto b); y lo que hace esta
+        función es que a cada elemento del array le aplica esa función de modificación. O dicho de otra manera,
+        modifica cada elemento del array usando esa función de modificación que se le pasa.
+        La función no devuelve nada. Probarlo usando el array de números devuelto por la llamada de la
+        función del punto a) y la función “multiplicarPorTres(numero)” hecha en el punto b).
+
+    </h1>
+    <script>
+        const arrayNumeros = [1, 2, 3, 4, 5];        //array declarado y con valores deseados
+
+        function multiplicaPorTres(numeroDeseado) {         //funcion que multiplica
+            let resultado = numeroDeseado * 3;
+            return resultado;
+        };
+
+        function modificarArray(arrayNumeros, multiplicaPorTres) {       //funcion dos parametros
+            const arrayModificado = [];
+
+            for (let i = 0; i < arrayNumeros.length; i++) {
+                const elementoModificado = multiplicaPorTres(arrayNumeros[i]);
+                arrayModificado.push(elementoModificado);
+            }
+            return arrayModificado;
+        }
+
+        document.body.innerHTML += "<p1> Array original ------> " + arrayNumeros + "<br>";
+        document.body.innerHTML += "<p1> Array modificado ------> " + modificarArray(arrayNumeros, multiplicaPorTres);
+    </script>
+
+</body>
+</html>
