@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1 Apartado C</title>
+</head>
+
+<body>
+    <h1>Probarla llamando a la función modificarArrayNumeros(array, funcionModificación) con diferentes funciones de modificación.
+        Por ejemplo: llamarla una vez multiplicando por 10 y otra vez multiplicando por 5.
+
+    </h1>
+    <script>
+        const arrayNumeros = [1, 2, 3, 4, 5];        //array declarado y con valores deseados
+
+        function multiplicaPorTres(numeroDeseado) {         //funcion que multiplica
+            let resultado = numeroDeseado * 3;
+            return resultado;
+        };
+
+        function modificarArray(arrayNumeros, multiplicaPorTres) {       //funcion dos parametros
+            const arrayModificado = [];
+
+            for (let i = 0; i < arrayNumeros.length; i++) {
+                const elementoModificado = multiplicaPorTres(arrayNumeros[i]);
+                arrayModificado.push(elementoModificado);
+            }
+            return arrayModificado;
+        }
+
+        document.body.innerHTML += "<p1> Array original ------> " + arrayNumeros + "<br>";
+        document.body.innerHTML += "<p1> Array modificado ------> " + modificarArray(arrayNumeros, multiplicaPorTres);
+    </script>
+
+</body>
+</html>
