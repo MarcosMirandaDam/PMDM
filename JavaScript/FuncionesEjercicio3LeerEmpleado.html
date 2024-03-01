@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 Funciones</title>
+</head>
+
+<body>
+    <h3> Vamos a mostrar el empleado creado a continuación:</h3>
+    <br>
+    <script>
+        function leerEmpleado() {
+            const nombre = prompt("Introduce el nombre del empleado");
+            const edad = prompt("Introduce la edad del empleado");
+            const ciudad = prompt("Introduce la ciudad del empleado");
+            const estadoCivil = prompt("Introduce el estado civil del empleado");
+
+            const empleado = {
+                nombre: nombre,
+                edad: parseInt(edad),
+                ciudad: ciudad,
+                'estado civil': estadoCivil
+            };
+
+            return empleado;
+        }
+
+        const empleadoCreado=leerEmpleado();
+
+        for (let key in empleadoCreado) {
+            if (empleadoCreado.hasOwnProperty(key)) {
+                document.body.innerHTML += "<p1> " + key + " : " + empleadoCreado[key] + "<br>";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
