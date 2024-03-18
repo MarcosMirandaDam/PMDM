@@ -1,0 +1,9 @@
+function esMayorEdad(edad) {
+    return new Promise((resolve, reject) => {
+        edad >= 18 ? resolve(true) : reject(false);
+    });
+}
+let edadProbar=14;
+esMayorEdad(edadProbar)
+    .then(resultado => console.log("Tiene "+edadProbar+ " años,  es mayor de edad"))
+    .catch(resultado => console.log("Tiene "+edadProbar+ " años,  es menor de edad"))
