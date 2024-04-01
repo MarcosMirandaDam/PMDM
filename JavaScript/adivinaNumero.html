@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Ejercicio Adivinar número aleatorio</h1>
+    <h3>El programa genera un número aleatorio que debemos adivinar...
+        BUENA SUERTE !!!    </h3>
+    <script>
+    function adivinaNumero(numero){
+   	
+        let numeroAleatorio = Math.floor(Math.random() * 10);
+        if(numeroAleatorio == numero){
+            return "¡Ganaste!";
+        } else if(numeroAleatorio > numero){
+            return "El número aleatorio es mayor -->"+ numero+ " no es correcto";
+        } else if(numeroAleatorio < numero){
+            return "El número aleatorio es menor -->"+ numero+ " no es correcto";
+        } 
+    }
+    
+    let numeroJugador; 
+    let ganador=false;
+    
+    // llamamos a la función pidiendo numero al usuario
+    while(!ganador){
+        numeroJugador = parseInt(prompt("Introduce un número entre 0 y 9"));
+        let resultado = adivinaNumero(numeroJugador);
+        document.body.innerHTML += "<h1>"+resultado+ "</h1>";
+        if(resultado == "¡Ganaste!"){
+        ganador=true;
+    }
+    }
+</script>
+    
+</body>
+</html>
