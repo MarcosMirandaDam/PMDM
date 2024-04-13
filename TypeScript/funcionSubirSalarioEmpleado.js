@@ -1,6 +1,6 @@
 var empleados2 = [
     {
-        nombre: "Abel",
+        nombre1: "Abel",
         edad: 22,
         salario: 1000,
         direccion: {
@@ -10,7 +10,7 @@ var empleados2 = [
         }
     },
     {
-        nombre: "Ana",
+        nombre1: "Ana",
         edad: 24,
         salario: 1100,
         direccion: {
@@ -20,7 +20,7 @@ var empleados2 = [
         }
     },
     {
-        nombre: "Bartolomé",
+        nombre1: "Bartolomé",
         edad: 32,
         salario: 2000,
         direccion: {
@@ -30,7 +30,7 @@ var empleados2 = [
         }
     },
     {
-        nombre: "Bárbara",
+        nombre1: "Bárbara",
         edad: 42,
         salario: 1800,
         direccion: {
@@ -40,7 +40,7 @@ var empleados2 = [
         }
     },
     {
-        nombre: "Carlos",
+        nombre1: "Carlos",
         edad: 34,
         salario: 1000,
         direccion: {
@@ -50,7 +50,7 @@ var empleados2 = [
         }
     },
     {
-        nombre: "Cristina",
+        nombre1: "Cristina",
         edad: 54,
         salario: 2100,
         direccion: {
@@ -60,14 +60,13 @@ var empleados2 = [
         }
     }
 ];
-var subidaAplicar = 10;
-function subirSalario(empleados2) {
-    return empleados2.map(function (empleado) {
-        empleado.salario += empleado.salario * subidaAplicar / 100;
-        return empleado;
-    });
-}
-console.log(subirSalario(empleados2));
+var subida = 10; //es 10%
+//ejemplo de uso de map    
+var nuevosSalarios = empleados2.map(function (empleado) { return empleado.salario += empleado.salario * subida / 100; });
+console.log(nuevosSalarios);
+//ejemplo de desestructuración y de resto de parámetros ...
+var _a = empleados2[nuevosSalarios.indexOf(Math.max.apply(Math, nuevosSalarios))], nombre1 = _a.nombre1, salario = _a.salario;
+console.log("El empleado ".concat(nombre1, " con un salario de ").concat(salario, " es el que m\u00E1s gana"));
+//el array de empleados despues de subir el sueldo es:
+console.log("El array de empleados después subida sueldo es:");
 console.log(empleados2);
-console.log("O mostrando sólo el nombre y salario:");
-empleados2.forEach(function (empleado) { return console.log("Nombre: ".concat(empleado.nombre, "  y  Nuevo Salario: ").concat(empleado.salario)); });
