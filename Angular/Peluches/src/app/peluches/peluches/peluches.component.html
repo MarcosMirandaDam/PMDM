@@ -1,0 +1,16 @@
+<div class="container" >
+    <app-item-peluche 
+    *ngFor="let miPeluche of peluches"
+    [peluche]="miPeluche"
+    [routerLink]="['peluche',miPeluche.id]"
+    routerLinkActivated="active"
+    ></app-item-peluche>
+</div>
+    <br>
+    <div class="boton-inferior">
+    <div style="clear:both">
+      <button routerLink="/anadir-peluche"> Añadir Peluche</button>
+  </div>
+</div>
+ 
+  
